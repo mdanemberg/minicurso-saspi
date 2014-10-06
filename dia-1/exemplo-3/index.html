@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>Minicurso Angular</title>
+  <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+</head>
+<body>
+
+  <input type="text" ng-model="searchText">
+
+  <br>
+  <br>
+
+  <table ng-controller="alunoController">
+    <tr ng-repeat="aluno in alunos | filter: searchText">
+      <td><a href="javascript:;" ng-click="foo(aluno)">{{ aluno }}</a></td>
+    </tr>
+  </table>
+
+  <script>
+    function alunoController ($scope) {
+      $scope.alunos = ['Matheus', 'Mateus', 'José'];
+
+      $scope.foo = function(aluno) {
+        alert(aluno);
+      };
+    }
+  </script>
+</body>
+</html>
