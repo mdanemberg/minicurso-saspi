@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>Minicurso Angular</title>
+  <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+</head>
+<body>
+
+  <div ng-controller="alunoController">
+    <input type="text" ng-model="novoAlunoNome">
+    <input type="text" ng-model="novoAlunoIdade">
+    <button ng-click="adicionarAluno()">Adicionar</button>
+    <table border>
+      <tr ng-repeat="aluno in alunos | filter: searchText">
+        <td>{{ aluno.name }}</td>
+        <td>{{ aluno.age }}</td>
+        <td><a href="javascript:;" ng-click="removerAluno(aluno)">excluir</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function alunoController ($scope) {
+      $scope.alunos = [
+        {name: 'Matheus', age: 21},
+        {name: 'Mateus', age: 25},
+        {name: 'Adão', age: 26},
+        {name: 'José', age: 40}
+      ];
+
+      $scope.adicionarAluno = function() {
+        $scope.alunos.push(
+          {name: $scope.novoAlunoNome,
+            age: $scope.novoAlunoIdade}
+            );
+      };
+
+      $scope.removerAluno = function(aluno) {
+        $scope.alunos.splice($scope.alunos.indexOf(aluno), 1);
+      };
+    }
+  </script>
+</body>
+</html>
