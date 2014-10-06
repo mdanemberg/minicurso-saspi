@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cursoApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Minicurso Angular</title>
+  <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body>
+  <div ng-controller="alunoController">
+    <input type="text" ng-model="novoAlunoNome">
+    <input type="text" ng-model="novoAlunoIdade">
+    <button ng-click="adicionarAluno()">Adicionar</button>
+    <table border>
+      <tr ng-repeat="aluno in alunos | filter: searchText">
+        <td>{{ aluno.name }}</td>
+        <td>{{ aluno.age }}</td>
+        <td><a href="javascript:;" ng-click="removerAluno(aluno)">excluir</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
