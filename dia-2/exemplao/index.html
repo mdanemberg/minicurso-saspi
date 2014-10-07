@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cursoApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Minicurso Angular</title>
+  <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+  <script src="main.js"></script>
+  <style>
+    .green {color: green;}
+  </style>
+</head>
+<body>
+  <div ng-controller="testeController">
+    <h1>{{ nome }}</h1>
+    <table border>
+      <tr ng-repeat="produto in produtos | orderBy: 'nome'-reverse">
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.valor | currency}}</td>
+        <td>{{ 1288323623006 | date:"yyyy/MM/dd" }}</td>
+        <td>{{ produto.desc | reverse }}</td>
+        <td enter="green" matheus="angular" leave>{{ produto.desc | uppercase }}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
