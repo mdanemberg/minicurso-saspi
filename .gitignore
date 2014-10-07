@@ -1,0 +1,6 @@
+# IDE/text editors
+*.sublime-*
+.project
+.idea/
+nbproject/
+*.*~
