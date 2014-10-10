@@ -1,12 +1,20 @@
-#VÍDEOS E CURSOS ONLINE
+Segue algumas dicas de links uteis para aprender melhor o angular, leiam tudo e fiquem foda! Entrem no grupo AngularJS Brasil no Facebook, de lá que eu tirei a maioria dos links.
+
+
+##VÍDEOS E CURSOS ONLINE
 ----------------------------------
-<https://www.codeschool.com/courses/shaping-up-with-angular-js>
-<http://www.egghead.io/>
-<http://yearofmoo-articles.github.io/angularjs-testing-article/app/#!/videos>
-<http://www.angularcourse.com/#/>
+* <https://www.codeschool.com/courses/shaping-up-with-angular-js>
+* <http://www.egghead.io/>
+* <http://yearofmoo-articles.github.io/angularjs-testing-article/app/#!/videos>
+* <http://www.angularcourse.com/#/>
+* <https://www.youtube.com/watch?v=GRTBSmm-dlU>
+* <https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/>
+* <http://www.airpair.com/angularjs>
+* <http://tableless.com.br/criando-uma-aplicacao-simples-com-angularjs/>
+* <https://docs.angularjs.org/tutorial/step_00>
 
 
-#ARTIGOS, GUIAS E AFINS
+##ARTIGOS, GUIAS E AFINS
 ----------------------------------
 
 ####Diferença entre attrs.$observe e scope.$watch
